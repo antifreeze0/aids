@@ -1,0 +1,179 @@
+local lib = loadstring(game:HttpGet("https://raw.githubusercontent.com/insanedude59/UILib/main/source"))();
+
+
+local repstorage = game:GetService("ReplicatedStorage")
+
+amountn = 1
+amounti = 1000000
+
+
+
+local function toilet()
+   triggers = {"Toilet"}
+   for i=1,amountn do
+      for i,v in pairs(workspace:GetDescendants()) do
+         if table.find(triggers, v.Name) then
+               local args = {
+                  [1] = v.Interact,
+                  [2] = "Value",
+                  [3] = true,
+                  [4] = "interact"
+               }
+
+               repstorage.InteractFunction:InvokeServer(unpack(args))
+         end
+      end
+   end
+end
+
+
+local function lightswitcher()
+   triggers = {"LightSwitch", "Lamp"}
+   for i=1,amountn do
+      for i,v in pairs(workspace:GetDescendants()) do
+         if table.find(triggers, v.Name) then
+               local args = {
+                  [1] = v.Interact,
+                  [2] = "Value",
+                  [3] = true,
+                  [4] = "interact"
+               }
+
+               repstorage.InteractFunction:InvokeServer(unpack(args))
+         end
+      end
+   end
+end
+
+
+local function lightswitcher2()
+   triggers = {"LightSwitch", "Lamp"}
+   for i=1,amounti do
+      for i,v in pairs(workspace:GetDescendants()) do
+         if table.find(triggers, v.Name) then
+               local args = {
+                  [1] = v.Interact,
+                  [2] = "Value",
+                  [3] = true,
+                  [4] = "interact"
+               }
+
+               repstorage.InteractFunction:InvokeServer(unpack(args))
+         end
+      end
+   end
+end
+
+
+local function door()
+   triggers = {"Drawer", "LeftCupboard", "RightCupboard", "DeskDrawer", "ShelfDrawer", "Toilet", "InsideDoor", "SlidingDoor"}
+   for i=1,amountn do
+      for i,v in pairs(workspace:GetDescendants()) do
+           if table.find(triggers, v.Name) then
+               local args = {
+                   [1] = v.Interact,
+                   [2] = "Value",
+                   [3] = true,
+                   [4] = "interact"
+               }
+
+               repstorage.InteractFunction:InvokeServer(unpack(args))
+         end
+      end
+   end
+end
+
+local function door2()
+   triggers = {"Drawer", "LeftCupboard", "RightCupboard", "DeskDrawer", "ShelfDrawer", "Toilet", "InsideDoor", "SlidingDoor"}
+   for i=1,amounti do
+      for i,v in pairs(workspace:GetDescendants()) do
+           if table.find(triggers, v.Name) then
+               local args = {
+                   [1] = v.Interact,
+                   [2] = "Value",
+                   [3] = true,
+                   [4] = "interact"
+               }
+
+               repstorage.InteractFunction:InvokeServer(unpack(args))
+         end
+      end
+   end
+end
+
+
+
+local function garage1()
+   triggers = {"DoorOpener"}
+   for i=1,amountn do
+      for i,v in pairs(workspace:GetDescendants()) do
+           if table.find(triggers, v.Name) then
+               local args = {
+                   [1] = v.Interact,
+                   [2] = "Value",
+                   [3] = true,
+                   [4] = "interact"
+               }
+
+               repstorage.InteractFunction:InvokeServer(unpack(args))
+         end
+      end
+   end
+end
+
+local function garage2()
+   triggers = {"DoorOpener"}
+   for i=1,amounti do
+      for i,v in pairs(workspace:GetDescendants()) do
+           if table.find(triggers, v.Name) then
+               local args = {
+                   [1] = v.Interact,
+                   [2] = "Value",
+                   [3] = true,
+                   [4] = "interact"
+               }
+
+               repstorage.InteractFunction:InvokeServer(unpack(args))
+         end
+      end
+   end
+end
+
+
+lib:SetTitle("town thingymajic")
+
+local tab1 = lib:NewTab("perenormel activity", "fuck with interactables")
+local tab2 = lib:NewTab("perenormel activity+", "legit same as other tab but shit heres inf (spamming causes fps drops)")
+
+
+tab1:NewButton("stop all",function(stop)
+   toilet()
+end)
+
+tab1:NewButton("toggle light switches",function(switch1)
+   lightswitcher()
+end)
+
+tab1:NewButton("toggle doors",function(door1)
+   door()
+end)
+
+tab1:NewButton("toggle garage doors",function(gdoor)
+   garage1()
+end)
+
+tab2:NewButton("stop all",function(stop)
+   toilet()
+end)
+
+tab2:NewButton("spam light switches",function(switch2)
+   lightswitcher2()
+end)
+
+tab2:NewButton("spam doors",function(door2)
+   door2()
+end)
+
+tab2:NewButton("spam garage doors",function(gdoor2)
+   garage2()
+end)
